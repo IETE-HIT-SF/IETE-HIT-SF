@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE HIT SF</title>
+
+    <!-- CDN For Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- end of CDN For Swiper.js -->
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container1">
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <object data="../SVG/iete-icon.svg" type="image/svg+xml"></object>
+                    <span>IETE HIT SF</span>
+                </a>
+            </div>
+
+            <div class="navBar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Workshops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item">
+                        <object data="../SVG/nav-right-img.svg" type="image/svg+xml"></object>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <div class="sideOne1">
+                <img src="/SVG/circle.svg" alt="" class="circle" />
+            </div>
+            <div class="sideOne2">
+                <img src="/SVG/sideone.svg" />
+            </div>
+            <div class="robo" id="add-scaling1">
+                <!-- <object class="robot" data="../SVG/robot-face.svg" type="image/svg+xml"></object> -->
+                <img src="/SVG/circle.svg" alt="" class="circle1">
+                <img src="/SVG/robo.svg" alt="" class="robot">
+                <img src="/SVG/circle.svg" alt="" class="circle2">
+            </div>
+
+            <div class="detail" id="add-scaling2">
+                <!-- <object class="gradCircle1" data="../SVG/gradCircle2.svg" type="image/svg+xml"></object> -->
+                <img src="/SVG/leftarrow.svg" alt="" class="arrow1" />
+                <p class="name">IETE HIT SF</p>
+                <p class="brief">Welcome to our site! Stay ahead of the curve with the updates and insights of
+                    cutting-edge technology . Join us on our journey to explore the future of technology and be
+                    a part of “ IETE HIT SF Family ”
+                </p>
+                <img src="/SVG/leftArrow2.svg" alt="" class="arrow2" />
+                <a href="#"><button class="explore button" onclick="scalingFunc(event)"
+                        id="add-scaling3">Explore</button></a>
+                <img src="/SVG/circle.svg" alt="" class="circle3">
+            </div>
+
+
+
+            <!-- =================  code for image swiper  ============================= -->
+
+            <div class="swiper mySwiper" id="unhide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.pexels.com/photos/13955179/pexels-photo-13955179.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.pexels.com/photos/14655382/pexels-photo-14655382.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.pexels.com/photos/14933181/pexels-photo-14933181.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.pexels.com/photos/15045106/pexels-photo-15045106.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.pexels.com/photos/14604771/pexels-photo-14604771.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.pexels.com/photos/15146989/pexels-photo-15146989.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                    </div>\
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <!-- =================  code for image swiper ends here  ============================= -->
+        </main>
+    </div>
+
+
+
+    <!-- CDN For Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- CDN For Swiper.js -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 5,
+            spaceBetween: 70,
+            slidesPerGroup: 1,  // to specify kitna slides ek bar me move hoga 
+            centeredSlides: true,
+            grabCursor: true,
+
+
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                color: "white",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is <= 499px
+                300: {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    spaceBetweenSlides: 10
+                },
+                650: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                },
+                // when window width is <= 999px
+                999: {
+                    slidesPerView: 5,
+                    centeredSlides: true,
+                    // spaceBetweenSlides: 50
+                }
+            }
+        });
+    </script>
+
+
+
+    <script>
+        // let widthOfCont = document.getElementsByClassName('container1')[0].offsetWidth;
+        let widthOfCont = screen.width;
+        // console.log(widthOfCont);
+        let robo = document.getElementById('add-scaling1');
+        let detail = document.getElementById('add-scaling2');
+        let button = document.getElementById('add-scaling3');
+        let swiperOpen = document.getElementById('unhide');
+        let swiperSlides = document.getElementsByClassName('swiper-slide');
+
+        function scalingFunc(e) {
+            if (widthOfCont >= 1100) {   //  opening the slider for larger devices
+                robo.classList.add('scaling1');
+                detail.classList.add('scaling2');
+                button.classList.add('button-hide');
+                swiperOpen.classList.add('swiper-unhide');
+            }
+            else if(widthOfCont < 1100 && widthOfCont >= 770){   //  opening slider for smaller devices
+                robo.classList.add('scaling3');
+                detail.classList.add('scaling4');
+                // detail.classList.add('scaling3');
+                button.classList.add('button-hide');
+                swiperOpen.classList.add('swiper-unhide');
+            }
+            else{    //  opening slider for extra smaller devices
+                robo.classList.add('scaling4');
+                detail.classList.add('scaling4');
+                detail.classList.add('scaling5');
+                button.classList.add('button-hide');
+                swiperOpen.classList.add('swiper-unhide');
+                swiperOpen.classList.add('swiper-scaling');
+                console.log(swiperSlides);
+                for(let y = 0; y < swiperSlides.length; y++){
+                    swiperSlides[y].classList.add('swiper-slide-scaling');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
